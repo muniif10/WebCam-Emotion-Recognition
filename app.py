@@ -4,6 +4,7 @@ import streamlit as st
 from tensorflow import keras
 from keras.models import model_from_json
 import av
+import os
 from keras.preprocessing.image import img_to_array
 from streamlit_webrtc import (
     webrtc_streamer,
@@ -28,7 +29,7 @@ emotion_dict = {
 
 
 classifier = tf.keras.models.load_model(
-    "/home/wackster/MachineLearning/Working_Directory/model.keras"
+    os.getcwd()+"/model.keras"
 )
 
 
@@ -85,7 +86,13 @@ def main():
         mode=WebRtcMode.SENDRECV,
         rtc_configuration=RTC_CONFIGURATION,
         video_frame_callback=video_frame_callback,
-        media_stream_constraints={"video": True, "audio": False},
+        media_stream_constraints={
+            "video": True,
+            "audio": False,
+            "video": {
+                "width": {"min": 800, "ideal": 1200, "max": 1920},
+            },
+        },
     )
 
 
