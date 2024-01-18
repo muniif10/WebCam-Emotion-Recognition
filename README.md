@@ -4,8 +4,11 @@ Real-time facial expression recognition using Haar Cascade for face detection an
 ## How to install and run
 1) Clone this repository
 2) `cd` into the repository
-3) Run `pip install -r requirements.txt`
-4) Run `streamlit run app.py`
+3) Make a virtual environment `python -m venv .`
+4) Activate the environment `source ./bin/activate` 
+5) Run `pip install -r requirements.txt` to get all required libraries
+6) Run `streamlit run app.py` and it should open a browser tab or open the link that appears in the command line/terminal.
+7) Press the start button in the web page and the emotion recognition should work.
 
 # Reference
 [Streamlit Interface reference](https://github.com/Mohammad-juned-khan/WebCam-Face-Emotion-Detection-Streamlit)
