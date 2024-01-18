@@ -2,7 +2,7 @@
 Real-time facial expression recognition using Haar Cascade for face detection and a CNN model for emotion classifier.
 
 ## How to install and run
-1) Clone this repository
+1) Clone this [repository](https://github.com/muniif10/WebCam-Emotion-Recognition/)
 2) `cd` into the repository
 3) Make a virtual environment `python -m venv .`
 4) Activate the environment `source ./bin/activate` 
